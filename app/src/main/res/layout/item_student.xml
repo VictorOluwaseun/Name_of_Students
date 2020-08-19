@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--Linear layout for grouping-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="2dp"
-    android:background="#335BFF"
+    android:background="@color/colorPrimary"
     >
-
+<!--Text View for surname-->
     <TextView
         android:id="@+id/tvSurname"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:textColor="#fff"
+        android:textColor="@color/colorText"
         android:padding="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
-
+<!--Text View for first name-->
     <TextView
         android:id="@+id/tvFirstName"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:textColor="#fff"
+        android:textColor="@color/colorText"
         android:padding="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>

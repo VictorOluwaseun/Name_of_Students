@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">ListOfStudents</string>
+<!--    The app name and list of students strings-->
+    <string name="app_name">Students</string>
     <string name="list_of_students">Name of Students</string>
-
-    <string name="space"> </string>
 </resources>

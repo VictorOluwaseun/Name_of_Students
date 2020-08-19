@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity(), StudentAdapter.OnStudentClick {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+// List of students names
         val studentNames = mutableListOf(
                 Student("Scott", "Edwards"),
                 Student("Lewis", "Rogers"),
@@ -30,12 +30,12 @@ class MainActivity : AppCompatActivity(), StudentAdapter.OnStudentClick {
                 Student("Lawrence", "Richardson"),
                 Student("Edwards", "Andrews"),
         )
-
+// Setting recycler view adapter
         val adapter = StudentAdapter(studentNames, this)
         rvStudents.adapter = adapter
         rvStudents.layoutManager = LinearLayoutManager(this)
     }
-
+// The override function from OnStudentClick Interface
     override fun click(data: Student) {
         Toast.makeText(this, "Hi! ${data.surname} ${data.firstName}", Toast.LENGTH_SHORT).show()
     }
