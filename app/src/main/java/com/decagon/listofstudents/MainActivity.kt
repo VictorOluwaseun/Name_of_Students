@@ -3,10 +3,11 @@ package com.decagon.listofstudents
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), StudentAdapter.OnStudentClick {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -30,8 +31,14 @@ class MainActivity : AppCompatActivity() {
                 Student("Edwards", "Andrews"),
         )
 
-        val adapter = StudentAdapter(studentNames)
+        val adapter = StudentAdapter(studentNames, this)
         rvStudents.adapter = adapter
         rvStudents.layoutManager = LinearLayoutManager(this)
     }
+
+    override fun click(data: Student) {
+        Toast.makeText(this, "Hi! ${data.surname} ${data.firstName}", Toast.LENGTH_SHORT).show()
+    }
+
+
 }
